@@ -1,0 +1,13 @@
+donJulian
+id              id
+color           nombre
+marca           clave
+precio
+talle
+foto    
+
+1)post alta media (sin token)
+2)get listado (sin token)
+3)post alta usuario (sin token)
+4)login retornar token 
+5) get listado usuarios (solo token)

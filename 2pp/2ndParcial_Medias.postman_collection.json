@@ -1,0 +1,466 @@
+{
+	"info": {
+		"_postman_id": "41e72d77-6a79-4566-a567-269ab22ecf98",
+		"name": "2ndParcial_Medias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "dueño",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/2pp/entrada/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"entrada",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "encargado",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "asdf",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "perfil",
+							"value": "encargado",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/2pp/usuario/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"usuario",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Listado",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MzA0ODUzMDgsImV4cCI6MTUzMDQ4NTQyOCwiYXVkIjoiMTE3ZDIxMGY1MThlNzY5MjZlY2Y2NTkxYTYxNmVlNjFhMzNlNjU0YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFuZHJlcyIsImNsYXZlIjpudWxsLCJwZXJmaWwiOiJkdWVcdTAwZjFvIn0sImFwcCI6IkFQSSBSRVNUIE1lZGlhcyBMZW9uIElmcmFuIn0.F92tRXfyZ3aorHedviLvAPff732cCg4nffGxZwX9hsk"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/2pp/usuario/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"usuario",
+						"listado"
+					]
+				},
+				"description": "Punto 5 Listado con token"
+			},
+			"response": []
+		},
+		{
+			"name": "Medias listado",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Mjk5OTA1OTcsImV4cCI6MTUyOTk5MDcxNywiYXVkIjoiMTE3ZDIxMGY1MThlNzY5MjZlY2Y2NTkxYTYxNmVlNjFhMzNlNjU0YiIsImRhdGEiOnsiaWQiOjEsIm5vbWJyZSI6ImFuZHJlcyIsImNsYXZlIjpudWxsLCJwZXJmaWwiOiJkdWVcdTAwZjFvIn0sImFwcCI6IkFQSSBSRVNUIE1lZGlhcyBMZW9uIElmcmFuIn0.pfBGUuS_gWZda2l7t7BJMs1fgYDcnTwheyb2CmeLKqQ"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/2pp/media/listado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"media",
+						"listado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medias Traer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/2pp/media/traer/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"media",
+						"traer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medias Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "color",
+							"value": "rojo",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "marca",
+							"value": "mercury",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "40",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "talle",
+							"value": "XL",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/2pp/media/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"media",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medias borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MzA0OTA3MjEsImV4cCI6MTUzMDQ5MDg0MSwiYXVkIjoiMTE3ZDIxMGY1MThlNzY5MjZlY2Y2NTkxYTYxNmVlNjFhMzNlNjU0YiIsImRhdGEiOnsiaWQiOjEwLCJub21icmUiOiJkdWVcdTAwZjFvIiwiY2xhdmUiOm51bGwsInBlcmZpbCI6ImR1ZVx1MDBmMW8ifSwiYXBwIjoiQVBJIFJFU1QgTWVkaWFzIExlb24gSWZyYW4ifQ.8pd9BJ4rSw9Z1R6mz9kDjvoR9qtz0g-o12vuC4WeFH8"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/2pp/media/borrar/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"media",
+						"borrar",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas Alta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MzAyMjk1NDYsImV4cCI6MTUzMDIyOTY2NiwiYXVkIjoiMTE3ZDIxMGY1MThlNzY5MjZlY2Y2NTkxYTYxNmVlNjFhMzNlNjU0YiIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6ImVtcGxlYWRvIiwiY2xhdmUiOm51bGwsInBlcmZpbCI6ImVtcGxlYWRvIn0sImFwcCI6IkFQSSBSRVNUIE1lZGlhcyBMZW9uIElmcmFuIn0.yCh_H1ce0iI5su31BgxzUg0g9H0-WwnNJK4Rd6NSdI0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idMedia",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "nombreCliente",
+							"value": "blaze",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "importe",
+							"value": "66",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "fotoV",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/2pp/ventas/alta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"ventas",
+						"alta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas Traer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/2pp/ventas/traer/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"ventas",
+						"traer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas Modificar PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "idMed",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "sylen3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "importe",
+							"value": "7.99",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "4",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/2pp/ventas/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"ventas",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas Modificar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1MzAyMzI5MjcsImV4cCI6MTUzMDIzMzA0NywiYXVkIjoiMTE3ZDIxMGY1MThlNzY5MjZlY2Y2NTkxYTYxNmVlNjFhMzNlNjU0YiIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6ImVtcGxlYWRvIiwiY2xhdmUiOm51bGwsInBlcmZpbCI6ImVtcGxlYWRvIn0sImFwcCI6IkFQSSBSRVNUIE1lZGlhcyBMZW9uIElmcmFuIn0.battAyaxhsShSQoU9ztXYBU-vnKFtKdEhFt2mSzA7lc"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idMed",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "blaze",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "fecha",
+							"value": "2012-06-25 02-47-43",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "importe",
+							"value": "66",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "9",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "fotoV",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/2pp/ventas/modificar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"ventas",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ventas Borrar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/2pp/ventas/borrar/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"2pp",
+						"ventas",
+						"borrar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
