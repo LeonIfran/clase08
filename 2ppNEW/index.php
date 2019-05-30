@@ -36,6 +36,7 @@ $app->group('/media',function(){
     $this->post('/altaFoto',\mediaApi::class . ':subirSoloFoto');
     $this->get('/listado',\mediaApi::class . ':TraerTodos')->add(\MWparaFiltrar::class . ':FiltrarDatos');
     $this->get('/traer/{id}', \mediaApi::class . ':TraerUno');
+    $this->get('/traerTodas', \mediaApi::class . ':TraerTodasLasFotos');
     $this->delete('/borrar/{id}',\mediaApi::class . ':BorrarUno')->add(\MWparaAutentificar::class . ':VerificarUsuario');
     //$this->post('/',\personalApi::class . ':InsertarUno');
 });

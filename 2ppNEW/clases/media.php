@@ -76,19 +76,6 @@ class media
 				return $consulta->rowCount();
 	 }
 
-/* 	public static function BorrarmediaPorAnio($precio)
-	 {
-
-			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-			$consulta =$objetoAccesoDato->RetornarConsulta("
-				delete 
-				from medias 				
-				WHERE jahr=:anio");	
-				$consulta->bindValue(':anio',$precio, PDO::PARAM_INT);		
-				$consulta->execute();
-				return $consulta->rowCount();
-
-	 } */
 	public function Modificarmedia()
 	 {
 
@@ -158,9 +145,7 @@ class media
 			$consulta =$objetoAccesoDato->RetornarConsulta("select * from medias where id = $id");
 			$consulta->execute();
 			$mediaBuscado= $consulta->fetchObject('media');
-			return $mediaBuscado;				
-
-			
+			return $mediaBuscado;	
 	}
 
 	public function mostrarDatos()

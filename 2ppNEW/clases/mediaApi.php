@@ -71,26 +71,38 @@ class mediaApi extends media implements IApiUsable
 
     public function subirSoloFoto($request, $response, $args)
     {
+        $objDelaRespuesta = new media();
         $archivos = $request->getUploadedFiles();
         $datos = $request->getParsedBody();
         $destino="clases/fotos/";
         if(isset($archivos['foto']))
         {
             $nombreAnterior=$archivos['foto']->getClientFilename();
-            $extension= explode(".", $nombreAnterior)  ;//quito el punto y guardo la extension y el nombre en distintos indices
-           
-            $extension=array_reverse($extension);//doy vuelta el array para que la extension este en el indice 0
-            
-            $archivos['foto']->moveTo($nombreAnterior.".".$extension[0]);
-            
-            $pathCompleto = $nombreAnterior.".".$extension[0];
-            
-            $mimedia->setFoto($pathCompleto);
+            //$extension= explode(".", $nombreAnterior)  ;//quito el punto y guardo la extension y el nombre en distintos indices
+            //$extension=array_reverse($extension);//doy vuelta el array para que la extension este en el indice 0
+            $archivos['foto']->moveTo($destino.$nombreAnterior/*.".".$extension[0]*/);
+            $pathCompleto = $destino.$nombreAnterior/*.".".$extension[0]*/;
+            //$mimedia->setFoto($pathCompleto);
         }
-        return $response->withJson($archivos);
+        $objDelaRespuesta->respuesta="Se guardo la foto $nombreAnterior en $pathCompleto";
+        return $response->withJson($objDelaRespuesta,200);
         //to-do: pasar la foto de la carpeta temporal a la final
     }
-
+    
+    public function TraerTodasLasFotos($request, $response, $args)
+    {
+        $fileList = glob('clases/fotos/*.{jpg,gif,png}', GLOB_BRACE);
+        usort($fileList, function ($a, $b) {
+            return filemtime($a) - filemtime($b);
+        });
+        $auxResponse = array();
+    
+        foreach ($fileList as $foto) {
+            array_push($auxResponse, 'http://localhost/2ppNEW/' . $foto);
+            //echo $foto."<br>";
+        }
+        return $response->withJson($auxResponse, 200);
+    }
 
 
       public function BorrarUno($request, $response, $args) {

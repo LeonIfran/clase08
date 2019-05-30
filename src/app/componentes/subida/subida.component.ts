@@ -30,16 +30,10 @@ export class SubidaComponent implements OnInit {
 
           // You could upload it like this:
           const formData = new FormData();
-          formData.append('imagen', file, droppedFile.relativePath);
+          formData.append('foto', file, droppedFile.relativePath);
           formData.append('dato', 'datos');
           //formData.append();
-
-          // Headers
-/*           const headers = new HttpHeaders({
-            'security-token': 'mytoken'
-          }); */
-
-          this.http.post('http://localhost/2pp/media/altaFoto', formData, {})
+          this.http.post('http://localhost/2ppNEW/media/altaFoto', formData, {})
           .subscribe(data => {
             // Sanitized logo returned from backend
           });

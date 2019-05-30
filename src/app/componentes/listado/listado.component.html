@@ -1,0 +1,7 @@
+<mat-grid-list cols="" rowHeight="4:3">
+  <ng-container *ngFor="let foto of listadoFotos">
+      <mat-grid-tile class="marcoImagen">
+          <img mat-card-image [src]=foto class="height-100" width="auto">
+      </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>
